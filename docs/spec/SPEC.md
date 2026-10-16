@@ -91,7 +91,7 @@ Everything else visible in the screens **is design and must be reproduced as sho
 
 | Instructor message (Leaderboard popup, Arabic) | The reference uses **GE SS Two Light** (commercial). If the owner supplies the font files, self-host with `next/font/local`; otherwise use **IBM Plex Sans Arabic** 300/400 as a documented substitute (D-04). Load it only with the Leaderboard popup (`preload: false`). |
 
-Load with `next/font` (`display: 'swap'`, Latin subset for Spartan/Poppins), expose the variables `--font-spartan`, `--font-poppins`, `--font-arabic` and map them in `@theme inline` (§5.3).
+Load with `next/font` (`display: 'swap'`, Latin subset for Spartan/Poppins), expose the variables `--font-spartan`, `--font-poppins`, `--font-arabic-face` and map them in `@theme inline` (§5.3).
 
 ### 5.2 Measured type scale (fitted by matching rendered width + height with the real fonts; calibrate with the diff loop)
 | Element | Font | Size ≈ | Weight ≈ | Measured box (w×h) |
@@ -139,7 +139,7 @@ Line-heights: comment text 26, description 25, lesson row 26.
 @theme inline {
   --font-heading: var(--font-spartan);
   --font-body: var(--font-poppins);
-  --font-arabic: var(--font-arabic);
+  --font-arabic: var(--font-arabic-face);
 }
 ```
 This gives utilities such as `bg-band`, `text-heading`, `text-muted`, `border-hairline`, `bg-primary`, `font-heading`, `font-body`. Where this file says `--color-x`, use the matching utility.
