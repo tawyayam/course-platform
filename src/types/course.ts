@@ -8,8 +8,8 @@ export interface Lesson {
   title: string;
   type: LessonType;
   locked: boolean;
-  durationMinutes?: number; // → "N MINUTES"
-  questionCount?: number; // → "N QUESTION"
+  durationMinutes?: number;
+  questionCount?: number;
   videoSrc?: string;
   pdfSrc?: string;
   examId?: string;
@@ -17,9 +17,9 @@ export interface Lesson {
 
 export interface CurriculumSection {
   id: string;
-  title: string; // mobile/tablet accordion heading
-  weekRange: string; // desktop card heading
-  description: string; // desktop card description
+  title: string;
+  weekRange: string;
+  description: string;
   lessons: Lesson[];
 }
 
@@ -67,14 +67,14 @@ export interface Course {
   instructor: string;
   cover: StaticImageData;
   poster: StaticImageData;
-  progressPercent: number; // 0–100: single source of truth for status AND progress on both pages (seed 63)
+  progressPercent: number;
   duration: string;
   language: string;
-  enrolledCount: number; // e.g. "3 weeks", "English", 65
+  enrolledCount: number;
   currentLessonId: string;
   sections: CurriculumSection[];
   comments: CourseComment[];
-  leaderboard: LeaderboardEntry[]; // ≥ 6 entries
-  studentPercentile: number; // 60 for the SEO course
+  leaderboard: LeaderboardEntry[];
+  studentPercentile: number;
   exams: Exam[];
 }

@@ -3,6 +3,7 @@ export type StudentLevel = 1 | 2 | 3 | 4 | 5;
 /**
  * Instructor motivational messages by student level (Appendix A).
  * Each level contains two Egyptian Arabic message variants.
+ * I’m not Egyptian, so I used ChatGPT to translate my sentences into Egyptian Arabic. Please don’t hold it against me if there are any mistakes in the dialect😅😅 
  */
 export const levelMessages: Record<StudentLevel, [string, string]> = {
   1: [
