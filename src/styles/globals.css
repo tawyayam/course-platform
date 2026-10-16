@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-band: #f5f9fa;          /* header band, popup boxes */
+  --color-hairline: #e8e8e8;      /* borders, separators */
+  --color-heading: #000000;
+  --color-text: #110f15;
+  --color-muted: #6c6a7a;         /* descriptions, comment name/date/text */
+  --color-placeholder: #939393;
+  --color-primary: #41b69d;       /* Submit button */
+  --color-tag-green-bg: #f2faf8;  --color-tag-green-text: #30b3a4;   /* ≈ */
+  --color-tag-red-bg:   #fdf2f4;  --color-tag-red-text:   #e53047;   /* ≈ */
+  --color-play: #e54860;          /* ≈ play triangle */
+  --color-progress-fill: #6abd8a;
+  --color-progress-track: #e6e6e6;
+  --color-marker: #485293;        /* "You" and percentage text */
+  --color-marker-border: #c8c8c8;
+  --color-icon: #6f6f6f;          /* ≈ icon-circle icons */
+}
+
+@theme inline {
+  --font-heading: var(--font-spartan);
+  --font-body: var(--font-poppins);
+  --font-arabic: var(--font-arabic);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
